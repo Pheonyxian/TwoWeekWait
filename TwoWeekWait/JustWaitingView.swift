@@ -16,16 +16,7 @@ struct JustWaitingView: View {
                 VStack(alignment: .leading) {
                     //God forbid the alignment actually work and I didn't have to do this
                     Spacer()
-                    HStack {
-                        Text(viewModel.text1)
-                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                            .frame(alignment: .leading)
-                            .foregroundColor(.white)
-                            .padding([.bottom], 20)
-                            .opacity(viewModel.text1.isEmpty ? 0 : 1) // Hide when empty
-                            .animation(.easeInOut(duration: 1), value: viewModel.text1) // Smooth fade effect
-                        Spacer()
-                    }
+                    //FadeInTextView(text: $viewModel.text1)
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -33,15 +24,7 @@ struct JustWaitingView: View {
             
             ZStack {
                 VStack(alignment: .leading) {
-                    HStack {
-                        Text(viewModel.text2)
-                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                            .frame(alignment: .leading)
-                            .foregroundColor(.white)
-                            .opacity(viewModel.text2.isEmpty ? 0 : 1) // Hide when empty
-                            .animation(.easeInOut(duration: 1), value: viewModel.text2) // Smooth fade effect
-                        Spacer()
-                    }
+                    //FadeInTextView(text: $viewModel.text2)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)

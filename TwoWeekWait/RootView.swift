@@ -21,7 +21,7 @@ struct RootView: View {
         case .negative:
             ContentView()
         case .waiting:
-            JustWaitingView()
+            DoublePresenterView()
         }
     }
 }
